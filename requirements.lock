@@ -28,7 +28,7 @@ dnspython==2.7.0
 email-validator==2.2.0
     # via fastapi
 fastapi==0.115.6
-    # via grapher
+    # via txtree
 fastapi-cli==0.0.6
     # via fastapi
 h11==0.14.0
@@ -54,7 +54,7 @@ mdurl==0.1.2
     # via markdown-it-py
 pydantic==2.10.3
     # via fastapi
-    # via grapher
+    # via txtree
 pydantic-core==2.27.1
     # via pydantic
 pygments==2.18.0

@@ -28,7 +28,7 @@ dnspython==2.7.0
 email-validator==2.2.0
     # via fastapi
 fastapi==0.115.6
-    # via grapher
+    # via txtree
 fastapi-cli==0.0.6
     # via fastapi
 h11==0.14.0
@@ -52,13 +52,16 @@ markupsafe==3.0.2
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
+nodeenv==1.9.1
+    # via pyright
 pydantic==2.10.3
     # via fastapi
-    # via grapher
+    # via txtree
 pydantic-core==2.27.1
     # via pydantic
 pygments==2.18.0
     # via rich
+pyright==1.1.390
 python-dotenv==1.0.1
     # via uvicorn
 python-multipart==0.0.19
@@ -83,6 +86,7 @@ typing-extensions==4.12.2
     # via fastapi
     # via pydantic
     # via pydantic-core
+    # via pyright
     # via rich-toolkit
     # via typer
 uvicorn==0.32.1
