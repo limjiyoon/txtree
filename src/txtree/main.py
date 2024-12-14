@@ -1,11 +1,13 @@
-from fastapi import FastAPI
+"""Basic FastAPI app."""
 
+from fastapi import FastAPI
 
 app = FastAPI()
 
 
 @app.get("/")
-async def test():
+async def test() -> dict:
+    """Tmp test endpoint."""
     return {"message": "Hello World"}
 
 
