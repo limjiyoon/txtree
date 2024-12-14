@@ -1,0 +1,79 @@
+[project]
+name = "grapher"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = [
+    "fastapi[standard]>=0.115.6",
+    "pydantic>=2.10.3",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/grapher"]
+
+[tool.ruff]
+# Enable pycodestyle (`E`) and Pyflakes (`F`) codes by default.
+line-length = 120
+lint.select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "N",  # pep-naming
+    "D",  # pydocstyle
+    "B",  # flakes-bugbear
+    "ANN",# flakes-annotations
+    "A",  # flakes-builtins
+    "COM",# flakes-commas
+    "T10",# flakes-debugger
+    "SIM",# flakes-simplify
+    "ARG",# flakes-unused-arguments
+    "PLC",# pylint-convention
+    "PLE",# pylint-errors
+    "UP",  # pyupgrade
+    "PL"  # pylint
+]
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+lint.fixable = ["ALL"]
+lint.ignore = ["D104", "D406", "D407", "D408", "D409", "D203", "D213", "D417", "B905", "ANN002", "ANN003", "ANN401", "ANN204", "COM812", "D107", "N812"]
+
+# Exclude a variety of commonly ignored directories.
+lint.exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+
+[tool.pyright]
+reportMissingImports = true
+
